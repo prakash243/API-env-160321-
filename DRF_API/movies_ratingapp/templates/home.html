@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+</head>
+<body>
+    <center><h1>Student Table</h1>
+        <a href="add/">Add Student</a>
+    <table border="1">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Roll</th>
+            <th>City</th>
+            <th>Action</th>
+        </thead>
+{% for s in students %}
+        <tr>
+            <td>{{s.id}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.roll}}</td>
+            <td>{{s.city}}</td>
+            <td><a href="/update/{{s.id}}">Edit</a></td>
+            <td><a href="/delete/{{s.id}}">Del</a></td>
+        </tr>
+
+
+    {% endfor %}
+    </table>
+</center>
+
+</body>
+</html>

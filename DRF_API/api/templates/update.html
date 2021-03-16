@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="/update/{{student.id}}" method="post">
+        {% csrf_token %}
+
+    <input type="hidden" name="name" value="{{student.id}}">
+    Name: <input type="text" name="name" value="{{student.name}}">
+    Roll no:<input type="number" name="roll" value="{{student.roll}}">
+    Cstudentty: <input type="text" name="city" value="{{student.city}}">
+
+    <input type="submit" value="Update">
+
+</form>
+</body>
+</html>
